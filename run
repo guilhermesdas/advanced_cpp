@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# verify is there's a argument
+if [ -z "$1" ]
+	then
+		echo "No arguments. Exiting..."
+		exit
+fi
+
+# compile and run
+g++ src/$1.cpp -o BUILD/$1 # compile
+./BUILD/$1
